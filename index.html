@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sarveshwar Kumar Shukla — Portfolio</title>
+  <meta name="description" content="Portfolio of Sarveshwar Kumar Shukla — Full-Stack Developer (Node.js, React, Microservices)." />
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7c3aed',
+            accent: '#06b6d4'
+          },
+          fontFamily: {
+            inter: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { --glass: rgba(255,255,255,0.04); }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    /* small focus-visible style for keyboard users */
+    .focus-ring:focus { outline: 2px solid transparent; box-shadow: 0 0 0 4px rgba(124,58,237,0.12); }
+    .progress-bg { background: linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06)); border-radius: 9999px; }
+    /* simple multiline clamp (fallback) */
+    .line-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Experience timeline */
+    .timeline { position: relative; }
+    .timeline:before { content: ''; position: absolute; left: 1.25rem; top: 0.5rem; bottom: 0; width: 2px; background: rgba(148,163,184,0.08); }
+    .timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+    .timeline-item:before { content: ''; position: absolute; left: 0.5rem; top: 0.6rem; width: 12px; height: 12px; border-radius: 9999px; background: linear-gradient(135deg,#7c3aed,#06b6d4); box-shadow: 0 0 0 4px rgba(124,58,237,0.08); }
+  </style>
+</head>
+<body id="home" class="bg-slate-900 text-slate-200 antialiased">
+  <header class="sticky top-0 z-50 bg-slate-900/60 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="" class="flex items-center gap-3">
+        <div>
+          <p class="text-sm font-semibold">Sarveshwar Kumar Shukla</p>
+          <p class="text-xs text-slate-400">Full‑Stack Developer</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-white/90 transition">About</a>
+        <a href="#experience" class="hover:text-white/90 transition">Experience</a>
+        <a href="#projects" class="hover:text-white/90 transition">Projects</a>
+        <a href="#skills" class="hover:text-white/90 transition">Skills</a>
+        <a href="#contact" class="hover:text-white/90 transition">Contact</a>
+      </nav>
+<div class="md:flex items-center gap-3">
+  <a href="https://drive.google.com/uc?export=download&id=1wgRm2RQtb6iCtS3k83NVL_UZ1c3okZvr" 
+     class="px-3 py-2 rounded-md border border-slate-700 text-sm hover:bg-slate-800 transition">
+     Download Resume
+  </a>
+</div>
+
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Open menu" class="p-2 rounded-md hover:bg-slate-800 focus-ring">
+          <svg class="w-6 h-6 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-slate-900">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about" class="py-2">About</a>
+        <a href="#experience" class="py-2">Experience</a>
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+    <!-- Hero: two-column layout (image + text) -->
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+<div class="flex items-center justify-center mt-6">
+  <!-- Large circular profile -->
+  <div class="w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] rounded-full overflow-hidden border-4 border-slate-800 shadow-xl flex-shrink-0">
+    <img id="heroPhoto" src="SELF.jpg" alt="Sarveshwar Kumar Shukla" 
+         class="w-full h-full object-cover" />
+  </div>
+</div>
+
+      <div class="max-w-xl">
+        <p class="text-sm text-accent font-medium mb-2">Hi, I'm</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight">Sarveshwar Kumar Shukla</h1>
+        <p class="mt-4 text-lg text-slate-300">Full-Stack Developer specializing in Node.js, React, and Microservices.</p>
+        <p class="mt-4 text-slate-300">I'm a final-year B.Tech IT student with a passion for building scalable web applications and solving complex problems. I have hands-on experience in both frontend and backend development, from RESTful APIs to responsive UI.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-slate-900 text-sm shadow hover:-translate-y-1 transform transition">View Projects</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 text-sm hover:shadow-lg transition">Get in touch</a>
+          <a id="downloadResume" href="#" class="inline-flex items-center gap-2 px-3 py-2 rounded-md text-sm border border-slate-700 hover:bg-slate-800 transition">Download Resume</a>
+        </div>
+
+        <div class="mt-6 flex items-center gap-6 text-sm text-slate-400">
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Ghaziabad, Uttar Pradesh</span></div>
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none"><path d="M2 7a2 2 0 012-2h3l2 3 3-2 5 5v6a2 2 0 01-2 2H4a2 2 0 01-2-2V7z" stroke="currentColor" stroke-width="1.5"/></svg><span>+91 63064 56347</span></div>
+        </div>
+
+        <div class="mt-6 flex items-center gap-3">
+          <!-- Social icons -->
+          <a href="https://www.linkedin.com/in/sarveshwar-shukla-31b6a1274/" class="group p-2 rounded-md bg-slate-800 hover:bg-primary/80 transition" aria-label="LinkedIn">
+            <svg class="w-5 h-5 text-slate-200 group-hover:text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.983 3.5C4.983 4.88071 3.85971 6 2.5 6C1.14029 6 0 4.88071 0 3.5C0 2.11929 1.14029 1 2.5 1C3.85971 1 4.983 2.11929 4.983 3.5zM0 8.5H5V24H0V8.5zM8 8.5H13V10.7C13.7 9.4 15.6 8 18.2 8C23 8 24 11.2 24 16.1V24H19V17.2C19 14.9 18.5 13.1 16 13.1C13.5 13.1 13 15.1 13 17.1V24H8V8.5z"/></svg>
+          </a>
+          <a href="https://github.com/sarveshwar4" class="group p-2 rounded-md bg-slate-800 hover:bg-slate-700 transition" aria-label="GitHub">
+            <svg class="w-5 h-5 text-slate-200 group-hover:text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.98 5.25.98 11.52c0 4.69 3.04 8.67 7.26 10.07.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.8-2.95.64-3.57-1.27-3.57-1.27-.48-1.22-1.17-1.55-1.17-1.55-.96-.66.07-.65.07-.65 1.06.08 1.62 1.09 1.62 1.09.94 1.6 2.47 1.14 3.07.87.09-.69.37-1.14.67-1.4-2.36-.27-4.84-1.18-4.84-5.25 0-1.16.41-2.11 1.09-2.86-.11-.27-.48-1.37.1-2.85 0 0 .89-.28 2.92 1.09a10.12 10.12 0 012.66-.36c.9 0 1.8.12 2.66.36 2.02-1.37 2.9-1.09 2.9-1.09.58 1.48.21 2.58.1 2.85.68.75 1.08 1.7 1.08 2.86 0 4.08-2.49 4.97-4.86 5.24.38.33.72.98.72 1.98 0 1.43-.01 2.58-.01 2.93 0 .28.19.61.73.51 4.22-1.4 7.26-5.38 7.26-10.07C23.02 5.25 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://leetcode.com/u/Sarveshwar_12/" class="group p-2 rounded-md bg-slate-800 hover:bg-slate-700 transition" aria-label="LeetCode">
+            <svg class="w-5 h-5 text-slate-200 group-hover:text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5l-1.06 1.06a9.02 9.02 0 00-12.83 12.83L3.5 21.5 2 20l3.11-3.11a9.02 9.02 0 0012.83-12.83L20.5 3.5zM9 9l6 6-1.4 1.4L7.6 10.4 9 9z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    <!-- About -->
+    <section id="about" class="mt-16 border-t border-slate-800 pt-10">
+      <div class="grid gap-8 items-start">
+        <div>
+          <h2 class="text-2xl font-bold">About Me</h2>
+          <p class="mt-4 text-slate-300">I am a B.Tech Information Technology student at Ajay Kumar Garg Engineering College (2022-2026). I am a dedicated problem-solver with a strong foundation in Data Structures and Algorithms, having solved over 500+ problems on platforms like LeetCode and GeeksforGeeks. I am an active contributor to the React and Node.js ecosystems and a regular participant in hackathons. I am eager to apply my skills to build innovative and impactful software solutions.</p>
+        </div>
+
+        <aside class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+          <h3 class="text-sm font-semibold text-slate-300">Contact</h3>
+          <dl class="mt-3 text-sm text-slate-300">
+            <div class="flex justify-between py-1">
+              <dt class="text-slate-400">Email</dt><dd class="font-medium"><a href="mailto:sarveshwarkumarshukla@gmail.com" class="text-accent">sarveshwarkumarshukla@gmail.com</a></dd>
+            </div>
+            <div class="flex justify-between py-1">
+              <dt class="text-slate-400">Phone</dt><dd class="font-medium">+91 63064 56347</dd>
+            </div>
+            <div class="flex justify-between py-1">
+              <dt class="text-slate-400">Location</dt><dd class="font-medium">Ghaziabad, Uttar Pradesh</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mt-16">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <p class="mt-2 text-sm text-slate-600">Technologies and tools I use regularly.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-700">Frontend</h3>
+          <div class="mt-3 space-y-3">
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>React & TypeScript</span><span>90%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>HTML & CSS / Tailwind</span><span>90%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>Accessibility (a11y)</span><span>85%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-700">Backend & DevOps</h3>
+          <div class="mt-3 space-y-3">
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>Node.js / Express</span><span>85%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>Databases (Postgres, Mongo)</span><span>80%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>Cloud & CI/CD</span><span>75%</span>
+              </div>
+              <div class="mt-1 h-2 progress-bg">
+                <div class="h-2 bg-primary rounded-full" style="width:75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-16">
+      
+      <div class="sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="mt-1 text-sm text-slate-400">Selected projects — full stack, microservices, and frontend-focused work with production-ready deployments.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="hidden sm:flex items-center gap-2 text-sm">
+            <button class="px-3 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-200">All</button>
+            <button class="px-3 py-1 rounded-md bg-transparent border border-slate-700 text-slate-400 hover:bg-slate-800">Web</button>
+            <button class="px-3 py-1 rounded-md bg-transparent border border-slate-700 text-slate-400 hover:bg-slate-800">Backend</button>
+            <button class="px-3 py-1 rounded-md bg-transparent border border-slate-700 text-slate-400 hover:bg-slate-800">Mobile</button>
+          </div>
+        </div>
+      </div>
+
+  <div class="flex mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch auto-rows-fr">
+  <article class="bg-slate-800 border border-slate-700 rounded-lg p-6 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] transform transition hover:-translate-y-1 hover:shadow-2xl h-full flex flex-col overflow-hidden">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white flex-shrink-0">DT</div>
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold">DevTinder</h3>
+                <p class="mt-1 text-sm text-slate-300 break-words">A matchmaking platform for developers based on tech stack and coding interests. Implemented secure JWT-based authentication, real-time chat with Socket.io, and a Razorpay payment gateway for premium memberships.</p>
+                <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                  <span class="px-2 py-1 rounded-md bg-slate-700">Node.js</span>
+                  <span class="px-2 py-1 rounded-md bg-slate-700">MongoDB</span>
+                  <span class="px-2 py-1 rounded-md bg-slate-700">Socket.io</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 mt-auto flex items-center justify-between">
+              <div></div>
+              <div class="flex items-center gap-3">
+                <a href="#" class="text-accent text-sm">Frontend</a>
+                <a href="#" class="text-accent text-sm">Backend</a>
+                <button data-project="1" class="text-accent text-sm hover:underline">Details</button>
+              </div>
+            </div>
+          </article>
+
+  <article class="bg-slate-800 border border-slate-700 rounded-lg p-6 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] transform transition hover:-translate-y-1 hover:shadow-2xl h-full flex flex-col overflow-hidden">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white flex-shrink-0">AP</div>
+            <div class="flex-1 min-w-0">
+              <h3 class="font-semibold">Airline Project Management System</h3>
+              <p class="mt-1 text-sm text-slate-300 break-words">Developed a microservices-based airline booking system with flight, booking, and auth services. API Gateway for routing and RabbitMQ for event-driven notifications. All services containerized with Docker.</p>
+              <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                <span class="px-2 py-1 rounded-md bg-slate-700">Microservices</span>
+                <span class="px-2 py-1 rounded-md bg-slate-700">PostgreSQL</span>
+                <span class="px-2 py-1 rounded-md bg-slate-700">Docker</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 mt-auto flex items-center justify-between">
+            <div></div>
+            <div class="flex items-center gap-3">
+              <a href="#" class="text-accent text-sm">GitHub</a>
+              <button data-project="2" class="text-accent text-sm hover:underline">Details</button>
+            </div>
+          </div>
+        </article>
+
+  <article class="bg-slate-800 border border-slate-700 rounded-lg p-6 min-h-[220px] sm:min-h-[260px] lg:min-h-[320px] transform transition hover:-translate-y-1 hover:shadow-2xl h-full flex flex-col overflow-hidden">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white flex-shrink-0">MA</div>
+            <div class="flex-1 min-w-0">
+              <h3 class="font-semibold">Movie App</h3>
+              <p class="mt-1 text-sm text-slate-300 break-words">Built a responsive movie browser using the TMDB API. Implemented asynchronous data loading and error handling with custom React hooks. Designed a modern, mobile-friendly UI using TailwindCSS.</p>
+              <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                <span class="px-2 py-1 rounded-md bg-slate-700">React.js</span>
+                <span class="px-2 py-1 rounded-md bg-slate-700">TMDB API</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 mt-auto flex items-center justify-between">
+            <div></div>
+            <div class="flex items-center gap-3">
+              <a href="#" class="text-accent text-sm">GitHub</a>
+              <button data-project="3" class="text-accent text-sm hover:underline">Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- divider -->
+    <div class="mt-12 border-t border-slate-800"></div>
+
+    <!-- Experience -->
+    <section id="experience" class="mt-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Experience</h2>
+        <p class="text-sm text-slate-400 hidden sm:block">Internships, freelance engagements and notable roles.</p>
+      </div>
+
+      <div class="timeline mt-6">
+        <div class="timeline-item">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-800 flex items-center justify-center text-slate-300 flex-shrink-0">FT</div>
+            <div>
+              <p class="text-sm font-semibold">Frontend Developer Intern — Lumbini Tech Link <span class="text-xs text-slate-400">· July 2025 - August 2025</span></p>
+              <p class="mt-1 text-sm text-slate-300">Developed React-based dashboards and web tools to optimize team operations. Built reusable UI components integrated with REST APIs for real-time data interaction. Assisted in app deployment using Vite, TailwindCSS, and Docker.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-800 flex items-center justify-center text-slate-300 flex-shrink-0">BD</div>
+            <div>
+              <p class="text-sm font-semibold">Backend Developer Intern — Engineering Hub <span class="text-xs text-slate-400">· April 2025 - May 2025</span></p>
+              <p class="mt-1 text-sm text-slate-300">Developed RESTful APIs using Node.js and Express.js for a scalable backend architecture. Integrated MongoDB for efficient data storage and optimized query performance. Implemented authentication and authorization using JWT for secure user sessions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-16 border-t border-slate-800 pt-10">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold">Get In Touch</h2>
+          <p class="mt-2 text-slate-300">Feel free to reach out to me at sarveshwarkumarshukla@gmail.com or use the form below.</p>
+
+          <div class="mt-6 bg-slate-800/40 border border-slate-700 rounded-lg p-6">
+            <form id="contactForm" class="space-y-4" onsubmit="submitContact(event)">
+              <div>
+                <label class="text-sm text-slate-300">Name</label>
+                <input required name="name" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200" />
+              </div>
+              <div>
+                <label class="text-sm text-slate-300">Email</label>
+                <input type="email" required name="email" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200" />
+              </div>
+              <div>
+                <label class="text-sm text-slate-300">Message</label>
+                <textarea required name="message" rows="5" class="mt-1 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200"></textarea>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent text-slate-900 text-sm hover:shadow-lg transition">Submit</button>
+                <div id="contactStatus" class="text-sm text-slate-400"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+          <h3 class="text-sm font-semibold text-slate-300">Other ways to reach me</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li>Email: <a href="mailto:sarveshwarkumarshukla@gmail.com" class="text-accent">sarveshwarkumarshukla@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/sarveshwar-shukla-31b6a1274/" class="text-accent">/Profile</a></li>
+            <li>GitHub: <a href="https://github.com/your-username" class="text-accent">/github</a></li>
+            <li>LeetCode: <a href="https://leetcode.com/your-username" class="text-accent">/code</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Resume anchor -->
+    <section id="resume" class="mt-16">
+      <h2 class="text-2xl font-bold">Resume</h2>
+      <p class="mt-2 text-sm text-slate-300">Download a concise PDF version of my resume.</p>
+      <div class="mt-4">
+        <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 text-sm">Download PDF</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-slate-800 pt-8 pb-12 text-sm text-slate-400">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>© 2025 Sarveshwar Kumar Shukla. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/sarveshwar-shukla-31b6a1274/" class="hover:text-white">LinkedIn</a>
+          <a href="https://github.com/sarveshwar4" class="hover:text-white">GitHub</a>
+          <a href="https://leetcode.com/u/Sarveshwar_12/" class="hover:text-white">LeetCode</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50">
+    <div class="bg-slate-900 rounded-lg max-w-2xl w-full mx-4 p-6 border border-slate-700">
+      <div class="flex items-start justify-between gap-4">
+        <h3 id="modalTitle" class="text-lg font-semibold">Project details</h3>
+        <button aria-label="Close" onclick="closeProject()" class="text-slate-400 hover:text-slate-200">✕</button>
+      </div>
+      <div id="modalBody" class="mt-4 text-sm text-slate-300"></div>
+      <div class="mt-6 flex justify-end">
+        <button onclick="closeProject()" class="px-4 py-2 rounded-md border border-slate-700 text-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+    // Project modal data
+    const projectData = {
+      1: {
+        title: 'DevTinder',
+        body: `<p>A matchmaking platform for developers based on tech stack and coding interests. Implemented secure JWT-based authentication, real-time chat with Socket.io, and a Razorpay payment gateway for premium memberships.</p><p class="mt-3 text-xs text-slate-400">Tech: Node.js, MongoDB, Express.js, React.js, JWT, Socket.io, Razorpay</p>`
+      },
+      2: {
+        title: 'Airline Project Management System',
+        body: `<p>Microservices-based airline booking system with flight, booking, and auth services. API Gateway for routing and RabbitMQ for event-driven notifications. All services containerized with Docker.</p><p class="mt-3 text-xs text-slate-400">Tech: Microservices, Node.js, PostgreSQL, Docker, RabbitMQ, Sequelize</p>`
+      },
+      3: {
+        title: 'Movie App',
+        body: `<p>Responsive movie browser using the TMDB API. Implemented async data loading and error handling with custom React hooks. Modern, mobile-friendly UI with TailwindCSS.</p><p class="mt-3 text-xs text-slate-400">Tech: React.js, TMDB API, Axios, TailwindCSS, React Hooks</p>`
+      }
+    };
+
+    document.querySelectorAll('[data-project]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.currentTarget.getAttribute('data-project');
+        const modal = document.getElementById('projectModal');
+        document.getElementById('modalTitle').innerText = projectData[id].title;
+        document.getElementById('modalBody').innerHTML = projectData[id].body;
+        modal.classList.remove('hidden'); modal.classList.add('flex');
+      });
+    });
+
+    function closeProject() { const modal = document.getElementById('projectModal'); modal.classList.remove('flex'); modal.classList.add('hidden'); }
+
+    // Contact form demo
+    function submitContact(e) { e.preventDefault(); const status = document.getElementById('contactStatus'); status.innerText = 'Sending…'; setTimeout(() => { status.innerText = 'Thanks — message received (demo).'; e.target.reset(); }, 800); }
+  </script>
+</body>
+</html>
